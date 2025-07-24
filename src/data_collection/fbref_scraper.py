@@ -1,48 +1,44 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup #Comment
 import requests
 import re
+import pandas as pd
+from io import StringIO
 
 URL = 'https://fbref.com/en/comps/9/stats/Premier-League-Stats'
 
 page= requests.get(URL)
-#print(page.text)
 
+#create soup object
 soup = BeautifulSoup(page.content, 'html.parser')
 
+#parse data from comment tag
+comment = soup.find(string=re.compile('<table class='))
 
-# re.sub(pattern,"",soup)
-#soup = soup.replace('<!--',"")
+#create new soup object of comment class
+new_soup= BeautifulSoup(comment, 'html.parser')
 
-div_tables=soup.find(
-        name='div',
-        attrs={
-                #'class':'table_container is_setup',
-                'id':'all_stats_standard'
-                }
-                )
-table_stats=None
-for element in div_tables.children:
-    if isinstance(element, Comment):
-        table_stats=element
+#parse required data only
+table = new_soup.find(
+    name='table',
+    attrs={'id':'stats_standard'}
+    )
 
+table_str= StringIO(str(table))
+#print(type(table_str))
 
-print(type(table_stats))
-print(table_stats)
-
-
-#print(type(div_tables.table.string))
-
-# table = str(div_tables)
-# pattern =r"<[!]--|-[-]>"
-# table = re.sub(pattern,"",table)
-
-
-#print(table)
+df_stats = pd.read_html(table_str, index_col=1,header=1)[0]
+print(df_stats.head())
+print(f'\ncolumn names:\n{df_stats.columns.tolist()}')
 
 
 
 
 
-#print(div_tables.prettify())
-#print(div_tables)
-#<div class="table_container" id="div_stats_standard">
+
+
+
+
+
+
+
+
