@@ -14,3 +14,13 @@ Table clubs {
   club_name varchar(255) [unique, not null]
 }
 
+Table market_values {
+    market_value_ID int [pk,increment]
+    player_id int [fk]
+    date_of_value date
+    market_value_eur int
+
+
+
+}
+

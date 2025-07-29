@@ -6,5 +6,9 @@ Objective:
 		a. A player stats table will introduce null values for attributes these players cannot have(i.e. goal keeper with progressive carries or striker with shots save)
 	2. Will be normalized; no duplication of data, each record linked to unique FKs(composite key)
 
-*   Will be a wide table
-*   
+*   There will be two wide table; this will solve the many to many relationships that exists and improve query performance
+    1.  One player -> many clubs
+    2.  one club -> many players/many competitions
+    3.  one player/club -> many seasons
+    4.  one season-> many clubs/players
+    
