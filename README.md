@@ -22,7 +22,9 @@ The primary goal is to generate a shortlist of 3-5 players who can replicate Cun
 This project will follow a three-phase approach:
 
 1.  **Data Pipeline & Feature Engineering:**
-    *   Develop Python scripts to scrape and clean player data.
+    *   Design Database Schema
+    *   Construct database in Docker, Postgres SQL
+    *   Develop Python scripts to scrape, clean player data and populate database
     *   Engineer key performance metrics, normalizing stats on a per-90-minute basis and applying Possession Adjustment (PAdj) to defensive actions for fair comparison.
     *   Establish a multi-faceted benchmark profile for Matheus Cunha based on 15 key metrics (e.g., npxG+xAG, Shot-Creating Actions, Progressive Carries, Pressures in Attacking Third).
 

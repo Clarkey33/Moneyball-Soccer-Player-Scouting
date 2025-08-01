@@ -1,0 +1,185 @@
+Table players {
+  player_id int [pk, increment]
+  first_name varchar(255) [not null]
+  last_name varchar(255)  [not null]
+  date_of_birth date [not null]
+  country varchar(255) [not null]
+  position varchar(50) [not null]
+}
+
+Table clubs {
+  club_id int [pk, increment]
+  club_name varchar(255) [unique, not null]
+}
+
+Table market_values {
+  market_value_id int [pk, increment]
+  player_id int [ref: > players.player_id, not null]
+  date_of_value date [not null]
+  market_value_eur int [not null]
+}
+
+Table competitions {
+  competition_id int [pk, increment]
+  competition_name varchar(255) [not null]
+  competition_country varchar(255) [not null]
+}
+
+Table seasons {
+  season_id varchar(12) [pk]
+  season_start date [not null]
+  season_end date [not null]
+}
+
+Table club_season_stats {
+  club_id int [ref: > clubs.club_id, not null]
+  season_id varchar(12) [ref: > seasons.season_id, not null]
+  competition_id int [ref: > competitions.competition_id, not null]
+  avg_possession float [not null]
+  goals int
+  assists int
+  xg float
+  npxg float
+  pen int
+  squad_size int
+  avg_age float
+
+  Indexes {
+    (club_id, season_id,competition_id) [pk] 
+  }
+}
+
+Table player_season_stats {
+  player_id int [ref: > players.player_id, not null]
+  club_id int [ref: > clubs.club_id, not null]
+  competition_id int [ref: > competitions.competition_id, not null]
+  season_id varchar(12) [ref: > seasons.season_id, not null]
+  matches_played int 
+  minutes_played int
+  matches_started int
+  goals int 
+  non_pen_goals int
+  xg float
+  npxg float
+  assists int
+  xa float
+  pass_cmp int
+  pass_att int
+  total_pass_dist int
+  passes_short_cmp int 
+  passes_short_att int
+  passes_med_cmp int
+  passes_med_att int
+  passes_long_cmp int
+  passes_long_att int
+  key_passes int
+  passes_final_3rd int 
+  passes_pen_area int
+  crosses_pen_area int
+  prg_passes int
+  prg_carries int
+  prg_passes_received int
+  prg_pass_dist int
+  passes_live_ball int 
+  passes_dead_ball int
+  passes_cross int
+  passes_through_ball int 
+  passes_switches int
+  sca int
+  sca_takeons int
+  sca_passes_live int
+  sca_passes_dead int 
+  sca_shots int
+  sca_fouls_drawn int
+  sca_def_actions int
+  gca int
+  gca_takeons int
+  gca_passes_live int 
+  gca_passes_dead int
+  gca_shots int
+  gca_fouls_drawn int
+  gca_def_actions int
+  shots int
+  shots_on_target int
+  avg_shot_dist float
+  shots_freekicks int
+  pen int
+  pen_att int
+  tackles int
+  tackles_won int
+  tackles_def_third int
+  tackles_mid_third int
+  tackles_atk_third int
+  dribblers_tackled_won int
+  dribblers_tackled_lost int
+  tackles_total_dribblers int
+  blocks int
+  block_shots int
+  block_passes int
+  interceptions int
+  clearances int
+  errors_to_shots int
+  touches int
+  touches_def_pen_area int
+  touches_def_3rd int
+  touches_mid_3rd int
+  touches_atk_3rd int
+  touches_atk_pen_area int
+  takeons_att int
+  takeons_successful int
+  tackled_during_takeons int
+  total_carry_dist int
+  prg_carry_dist int
+  prg_carries int
+  carries_final_third int
+  carries_pen_area int
+  miscontrols int
+  carries int
+  dispossessed int
+  passes_received int
+
+  //Miscellaneous
+  yellow_cards int
+  red_cards int
+  fouls_committed int
+  fouls_drawn int
+  offside int
+  crosses int
+  pen_won int
+  pen_conceded int
+  own_goals int
+  ball_recoveries int 
+  aerial_duels_won int
+
+  //Goalkeeping Stats(will be Null for outfielders)
+  goals_against_gk int
+  shots_on_target_against_gk int
+  shots_saved_gk int
+  clean_sheets_gk int
+  pen_att_gk int
+  pen_allowed_gk int
+  pen_saved_gk int
+  pen_missed_against_gk int
+  freekick_goals_against_gk int
+  cornerkick_goals_against_gk int
+  own_goals_scored_against_gk int
+  launched_passes_cmp_gk int
+  launched_passes_att_gk int
+  throws_att_gk int 
+  passes_att_gk int
+  goal_kicks_att_gk int
+  avg_passes_dist_gk float
+  avg_goal_kick_dist_gk float
+  crosses_faced_gk int
+  crosses_stopped_gk int
+  def_actions_outside_box_gk int
+  avg_def_acions_dist_gk float
+  psxg_gk float
+
+  Indexes{
+    (player_id, club_id, competition_id, season_id) [pk]
+    
+  }
+}
+
+
