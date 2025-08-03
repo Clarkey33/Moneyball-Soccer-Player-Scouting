@@ -31,6 +31,8 @@ Table seasons {
   season_end date [not null]
 }
 
+//--- Fact Tables ---
+
 Table club_season_stats {
   club_id int [ref: > clubs.club_id, not null]
   season_id varchar(12) [ref: > seasons.season_id, not null]
@@ -40,7 +42,7 @@ Table club_season_stats {
   assists int
   xg float
   npxg float
-  pen int
+  pen_made int
   squad_size int
   avg_age float
 
@@ -54,30 +56,39 @@ Table player_season_stats {
   club_id int [ref: > clubs.club_id, not null]
   competition_id int [ref: > competitions.competition_id, not null]
   season_id varchar(12) [ref: > seasons.season_id, not null]
+
+  //Playing Time
   matches_played int 
   minutes_played int
   matches_started int
+  
+  //Attacking - Standard
   goals int 
   non_pen_goals int
   xg float
   npxg float
   assists int
   xa float
+
+  //Passing -General
   pass_cmp int
   pass_att int
   total_pass_dist int
+
+  //Passing - by Length
   passes_short_cmp int 
   passes_short_att int
   passes_med_cmp int
   passes_med_att int
   passes_long_cmp int
   passes_long_att int
+
+  //Passing - Types and Outcomes
   key_passes int
   passes_final_3rd int 
   passes_pen_area int
   crosses_pen_area int
   prg_passes int
-  prg_carries int
   prg_passes_received int
   prg_pass_dist int
   passes_live_ball int 
@@ -85,6 +96,8 @@ Table player_season_stats {
   passes_cross int
   passes_through_ball int 
   passes_switches int
+
+  //Shot and Goal Creations
   sca int
   sca_takeons int
   sca_passes_live int
@@ -99,12 +112,16 @@ Table player_season_stats {
   gca_shots int
   gca_fouls_drawn int
   gca_def_actions int
+
+  //Shooting
   shots int
   shots_on_target int
   avg_shot_dist float
   shots_freekicks int
-  pen int
+  pen_made int
   pen_att int
+
+  //Defensive Actions
   tackles int
   tackles_won int
   tackles_def_third int
@@ -119,6 +136,8 @@ Table player_season_stats {
   interceptions int
   clearances int
   errors_to_shots int
+  
+  //Possession
   touches int
   touches_def_pen_area int
   touches_def_3rd int
@@ -150,6 +169,7 @@ Table player_season_stats {
   own_goals int
   ball_recoveries int 
   aerial_duels_won int
+  aerial_duels_lost int
 
   //Goalkeeping Stats(will be Null for outfielders)
   goals_against_gk int
@@ -173,12 +193,11 @@ Table player_season_stats {
   crosses_faced_gk int
   crosses_stopped_gk int
   def_actions_outside_box_gk int
-  avg_def_acions_dist_gk float
+  avg_def_actions_dist_gk float
   psxg_gk float
 
-  Indexes{
-    (player_id, club_id, competition_id, season_id) [pk]
-    
+  Indexes {
+    (player_id, club_id, competition_id, season_id) [pk] 
   }
 }
 
