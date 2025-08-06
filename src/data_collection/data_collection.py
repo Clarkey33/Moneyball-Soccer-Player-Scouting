@@ -1,66 +1,80 @@
-""" 
 
-"""
-
-
-# import requests
-# from bs4 import BeautifulSoup as bs
+import requests
+from bs4 import BeautifulSoup as bs
+import os
 
 
-# url = 'https://fbref.com/en/'
-# reqs = requests.get(url)
-# soup = bs(reqs.text, 'html.parser')
+base_url = 'https://fbref.com/en/'
+seasons_to_scrape = ["2024-2025","2023-2024","2022-2023","2021-2022"]
 
-# leagues=[
-#     '11/Serie-A-', '9/Premier-League-','12/La-Liga-',
-#     '13/Ligue-1-', '20/Bundesliga-', '21/Liga-Profesional-Argentina-',
-#     '56/Austrian-Bundesliga-','37/Belgian-Pro-League-', '24/Serie-A-',
-#     '67/Bulgarian-First-League-','63/Hrvatska-NL-', '66/Czech-First-League-',
-#     '50/Danish-Superliga-','27/Super-League-Greece-','31/Liga-MX-','23/Eredivisie-',
-#     '28/Eliteserien-', '36/Ekstraklasa-', '32/Primeira-Liga-', '30/Russian-Premier-League-',
-#     '40/Scottish-Premiership-','54/Serbian-SuperLiga-', '57/Swiss-Super-League-',
-#     '29/Allsvenskan-','26/Super-Lig-','22/Major-League-Soccer-',  
-#     ]
+league_config = {
+    "Italian Serie A":{"id":"11", "name":"Serie-A"},
+    "English Premier league":{"id":"9", "name":"Premier-League"},
+    "Spanish La liga":{"id":"12", "name":"La-Liga"},
+    "France Ligue 1":{"id":"13", "name":"Ligue-1"},
+    "German Bundesliga":{"id":"20", "name":"Bundesliga"},
+    "Argentina Liga Profesional":{"id":"21", "name":"Liga-Profesional-Argentina"},
+    "Austrian Bundesliga":{"id":"56", "name":"Austrian-Bundesliga"},
+    "Belgian Pro League":{"id":"37", "name":"Belgian-Pro-League"},
+    "Brazil Serie A":{"id":"24", "name":"Serie-A"},
+    "Bulgarian First League":{"id":"67", "name":"Bulgarian-First-League"},
+    "Hrvatska NL":{"id":"63", "name":"Hrvatska-NL"},
+    "Czech First League":{"id":"66", "name":"Czech-First-League"},
+    "Danish Superliga":{"id":"50", "name":"Danish-Superliga"},
+    "Super League Greece":{"id":"27", "name":"Super-League-Greece"},
+    "Mexico Liga MX":{"id":"31", "name":"Liga-MX"},
+    "Netherlands Eredivisie":{"id":"23", "name":"Eredivisie"},
+    "Eliteserien":{"id":"28", "name":"Eliteserien"},
+    "Ekstraklasa":{"id":"36", "name":"Ekstraklasa"},
+    "Primeira Liga":{"id":"32", "name":"Primeira-Liga"},
+    "Russian Premier League":{"id":"30", "name":"Russian-Premier-League"},
+    "Scottish Premiership":{"id":"40", "name":"Scottish-Premiership"},
+    "Serbian SuperLiga":{"id":"54", "name":"Serbian-SuperLiga"},
+    "Swiss Super League":{"id":"57", "name":"Swiss-Super-League"},
+    "Allsvenskan":{"id":"29", "name":"Allsvenskan"},
+    "Super Lig":{"id":"26", "name":"Super-Lig"},
+    "USA Major League Soccer":{"id":"22", "name":"Major-League-Soccer"},
+}
 
-# urls=[]
-# for link in soup.find_all('a', href=True):
-#     urls.append(link.get('href'))
-
-
-
-#print(urls)
-
-#-----------------------------------Start----------------------------------------------------
-
-#----Testing out urllib.parse----
-
-from urllib.parse import urlparse, urlsplit
-
-print(f"{urlparse('https://fbref.com/en/comps/9/2024-2025/2024-2025-Premier-League-Stats')}")
-print(f"{urlsplit('https://fbref.com/en/comps/9/2024-2025/2024-2025-Premier-League-Stats')}")
-print(f"\n{urlparse('https://fbref.com/en/')}")
-print(f"\n{urlparse('https://fbref.com/en/comps/12/La-Liga-Stats')}")
-
-
-
-
-
-
+stat_tables =[
+    'keepers','keepersadv','shooting','passing',
+    'passing_types','gca','defense','possession',
+    'playingtime','misc','stats'
+]
 
 
-#------------------------------------End---------------------------------------------------------
+def construct_url(
+        league_id:str ,
+        league_name:str,
+        stat_type:str=stat_tables,
+        season:str =seasons_to_scrape,
+        base_url:str=base_url) -> str:
+    
+    #https://fbref.com/en/comps/9/2024-2025/keepers/2024-2025-Premier-League-Stats
+    return f"{base_url}/comps/{league_id}/{season}/{stat_type}/{season}-{league_name}-Stats"
+
+def fetch_page(url:str)->str:
+
+    response = requests.get(url, timeout=10)
+    response.raise_for_status()
+
+    return response.text
+
+def construct_filepath(output_dir,
+                       season, 
+                       league_name,
+                       stat_type):
+    
+    safe_league_name = league_name.replace(" "."_")
+    
+    return os.path.join(
+        output_dir, 
+        f"{season}_{safe_league_name}_{stat_type}.html")
 
 
+def save_html(content, filepath):
 
-
-
-# for comp in leagues:
-#     for link in urls:
-#         if not comp in link:
-#             continue
-#         else:
-
-  
-
+    with open(filepath, 'w', encoding='utf-8') as html_file:
+        html_file.write(content)
 
 
