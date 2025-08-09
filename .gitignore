@@ -6,4 +6,5 @@ __pycache__/
 *.json
 *.sav
 *.joblib
+*.html
 .DS_Store
