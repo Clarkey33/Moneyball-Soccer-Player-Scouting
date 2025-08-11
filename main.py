@@ -26,8 +26,6 @@ def scrape_all_data():
                 continue
 
             for stat_type in stat_tables:
-                #update code to do file path check first; move filepath function up
-                #if it already exists, move on
                 file_path =construct_filepath(
                     season=season_string,
                     league_name=league_name,
