@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 
-output_dir = "../../data/processed"
+#output_dir = "../../data/processed"
 
 
 
@@ -18,74 +18,7 @@ def parse_table_from_html(
         html_path:str, 
         div_id:str) -> str:
     
-    with open(html_path,'r',encoding='utf-8') as f:
-        html_content = f.read()
-    
-    soup = BeautifulSoup(
-        html_content,
-        features= 'html.parser'
-        )
-    
-    div_with_table_data = None
-    parse_comments=None
-    table_with_data = None
-
-    if not soup.find('div',div_id):
-        print(f"div not found!")
-        return table_with_data
-    
-    else:
-        print(f'div found')
-        div_with_table_data= soup.find('div',div_id)
-        print("Searching for table..")
-        try: 
-            if div_with_table_data.find('table'):
-                table_with_data = div_with_table_data.find('table')
-                table_str= StringIO(str(table_with_data))
-                print("Desired table found!")
-                return table_str
-            else:
-                print("Contents not found for tag id : <div id={div_locator}")
-                print("checking if hidden by comment tag '<!--' ..")
-                if soup.find(string=re.compile('<table class=')):
-                    parse_comments = soup.find(string=re.compile('<table class='))
-                    new_soup = BeautifulSoup(parse_comments, 'html.parser')
-                    table_with_data= new_soup.find(name='table')
-                    table_str= StringIO(str(table_with_data))
-                    print("Desired table found!")
-
-                return table_str
-        except Exception as e:
-            print(f" Failed to parse table from div: {e}")
-
-    
-
-
-#     #parse data from comment tag
-#     comment = soup.find(string=re.compile('<table class='))
-
-#     #create new soup object of comment class
-#     new_soup= BeautifulSoup(comment, 'html.parser')
-#     #print(new_soup)
-
-#     #parse required data only
-#     table = new_soup.find(
-#         name='table',
-#         #attrs={'id':'stats_standard'}
-#         )
-
-#     table_str= StringIO(str(table))
-# #print(type(table_str))
-
-# df_stats = pd.read_html(table_str, index_col=1,header=1)[0]
-# print(df_stats.head())
-# print(f'\n{df_stats.info()}')
-# print(f'\ncolumn names:\n{df_stats.columns.tolist()}')
-
-
-
-#parse html from table
-"""
+    """
 1. load saved html page from ../../data/raw [input]
 2. create soup object with html page
 3. search soup oject for <div id= ''; id string [input]
@@ -94,6 +27,66 @@ def parse_table_from_html(
     b. if no table found in either 4/5 return none and move on to next html doc
 5. return parsed table as str 
 """
+
+    with open(html_path,'r',encoding='utf-8') as f:
+        html_content = f.read()
+    
+    soup = BeautifulSoup(
+        html_content,
+        features= 'html.parser'
+        )
+    
+    div_data = None
+    parse_comments=None
+    table_data = None
+    table_data_comment= None
+
+    if not soup.find('div',div_id):
+        print(f"div not found!")
+        return f"There was no div with id({div_id} found: {table_data}"
+    
+    else:
+        print(f'div found')
+        div_data= soup.find('div',div_id)
+        print("Searching for table..")
+        try: 
+            table_data = div_data.find('table')
+            table_data_comment = soup.find(string=re.compile('<table class='))
+
+            if table_data and table_data_comment:
+                print(f"\nparsing table from {table_data}\n")
+                table_data_str= StringIO(str(table_data))
+
+                print(f"\nparsing table from {table_data_comment}\n")
+                parse_comments = soup.find(string=re.compile('<table class='))
+                new_soup = BeautifulSoup(parse_comments, 'html.parser')
+                table_data_comment_= new_soup.find(name='table')
+                table_data_comment_str= StringIO(str(table_data_comment_))
+
+                return table_data_str, table_data_comment_str
+            
+            elif table_data:
+                print("Contents found for tag id : <div id={div_locator}")
+                table_data_str= StringIO(str(table_data))
+                print("Desired table found!")
+                return table_data_str
+            
+            elif table_data_comment:
+                print("Contents not found for tag id : <div id={div_locator}")
+                print("checking if hidden by comment tag '<!--' ..")
+                parse_comments = soup.find(string=re.compile('<table class='))
+                new_soup = BeautifulSoup(parse_comments, 'html.parser')
+                table_data_comment_= new_soup.find(name='table')
+                table_data_comment_str= StringIO(str(table_data_comment_))
+                print("Desired table found!")
+                return table_data_comment_str
+        except Exception as e:
+            print(f" Failed to parse table from div: {e}")
+
+    
+
+
+
 
 
 
