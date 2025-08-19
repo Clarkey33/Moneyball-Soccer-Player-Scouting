@@ -1,83 +1,58 @@
-from bs4 import BeautifulSoup #Comment
+from bs4 import BeautifulSoup, Comment
 import requests
 import re
 import pandas as pd
 from io import StringIO
 import os
-from pathlib import Path
-
-
+#from pathlib import Path
 
 #output_dir = "../../data/processed"
 
 
-
-
-
 def parse_table_from_html(
-        html, 
-        div_id:str):
+        html_content:str, 
+        div_id:str)-> str:
 
-    # with open(html_path,'r',encoding='utf-8') as f:
-    #     html_content = f.read()
-    
-    soup = BeautifulSoup(
-        html,
-        features= 'html.parser'
-        )
-    print(soup)
-    if not soup:
-        print(f"Soup object not created properly")
+    if not html_content:
+        print("Error: HTML content is empty.")
         return None
+    
+    soup = BeautifulSoup(html_content, features= 'html.parser')
 
-
-    if not soup.find('div',div_id):
-        print(f"div not found with id: {div_id}, table_found: {table_data}")
+    div_data = soup.find('div', id=div_id)
+    if not div_data:
+        print(f"Div with id= '{div_id}' not found.")
+        return None
         
-    if not soup.find('div',class_='placeholder'):
-        return None
-    
-    else:
-        print(f'div found')
-    
-    div_data= soup.find('div',div_id)
-    print(div_data)
-    try:
-        print("Searching for table..")
-        table_data = div_data.find('table')
-        if table_data:
-            table_data_str= StringIO(str(table_data))
-            print(f"Table found!\n")
-            return table_data_str
-        elif not table_data:
-            #check if hidden by comment tags
-            print(f"Checking if table hidden by comment tags..")
-            parse_comments = soup.find(string=re.compile('<table class='))
-            parse_comments_soup = BeautifulSoup(parse_comments,'html.parser')
-            table_data_comment = parse_comments_soup.find(name='table')
-            if table_data_comment:
-                table_data_comment_str= StringIO(str(table_data_comment))
-                print(f"Table found !")
-                return table_data_comment_str
+    table = div_data.find('table')
+    if table:
+        print(f"Table found directly in div ='{div_id}'")
+        return StringIO(str(table))  
+    print(f"No direct table in '{div_id}. Checking for commented-out tables..")
+
+    comments= div_data.find_all(string=lambda text:isinstance(text,Comment))
+    for comment in comments:
+        if '<table'in comment:
+            comment_soup = BeautifulSoup(comment, 'html.parser')
+            comment_table = comment_soup.find('table')
+            if comment_table:
+                print(f"Table found inside a comment in div='{div_id}'")
+                return StringIO(str(comment_table))
             else:
-                print(f"No table found!")
-                return None    
-        else:
-            print(f"no table found in div!: {div_id}")
-            return None
-    except Exception as e:
-        print(f" Failed to parse table from div: {e}\n")
+                print(f"No table could be found in div='{div_id}', either directly or in comments")
+                return None 
 
+
+def clean_data_tables(table:pd.DataFrame) -> pd.DataFrame:
+    #merge multi-index header
+    table.columns = [
+        f'{col[0].lower()}_{col[1].lower()}' if 'Unnamed:' not in col[0] else col[1].lower() for col in table.columns
+        ]
     
-
-
-
-
-
-
-
-
-
-
-
+    #drop duplicated index column
+    table.drop(axis=1, columns=['rk'],inplace = True)
+    
+    
+    print(table.head(2))
+    print(table.columns)
 
