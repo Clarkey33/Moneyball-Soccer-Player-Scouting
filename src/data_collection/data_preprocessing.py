@@ -187,14 +187,15 @@ PLAYER_STAT_MAPPINGS = {
     'gca': MAPPING_GCA,
     'defense': MAPPING_DEFENSE,
     'possession': MAPPING_POSSESSION,
-    'playingtime': MAPPING_PLAYING_TIME,
+    'playing_time': MAPPING_PLAYING_TIME,
     'misc': MAPPING_MISC,
     'keeper': MAPPING_KEEPER,
-    'keepersadv': MAPPING_KEEPER_ADV
+    'keeper_adv': MAPPING_KEEPER_ADV
 }
 
 # --- Mapping for the Team Stats Table ---
 TEAM_STAT_MAPPING = {
+    'squad': 'club_name',
     '#_pl': 'squad_size',
     'age': 'avg_age',
     'poss': 'avg_possession',
@@ -243,7 +244,7 @@ def parse_table_from_html(
                 return None 
 
 
-def clean_player_table(table:pd.DataFrame,
+def clean_player_dataframe(table:pd.DataFrame,
                        stat_type:str) -> pd.DataFrame:
     
     if not isinstance(table, pd.DataFrame) or table.empty:
@@ -277,14 +278,17 @@ def clean_player_table(table:pd.DataFrame,
     base_cols_to_keep = [col for col in base_player_info if col in df.columns]
     
     df = df[base_cols_to_keep + cols_to_keep]
+    #df = df[df['player'] != 'Player'].copy()
+    i = df[df['player'] == 'Player'].index
+    df.drop(i, inplace=True)
 
 
     if 'player' in df.columns:
-        df = df[df['player'] != 'Player'].copy()
+        #df = df[df['player'] != 'Player'].copy()
         name_split = df['player'].str.split(' ', n=1, expand=True)
         df['firstname'] = name_split[0]
         df['lastname'] = name_split[1]
-        df['lastname'].fillna(df['firstname'],inplace=True)
+        df['lastname'] = df['lastname'].fillna(df['firstname'])#,inplace=True)
         df.drop(columns=['player'], inplace=True)
 
     if 'nation' in df.columns:
@@ -298,11 +302,55 @@ def clean_player_table(table:pd.DataFrame,
     
     df.drop(columns=['rk','matches'], inplace=True,errors='ignore')
 
-    for col in df.select_dtypes(include=['object']).columns:
-        df[col] = pd.to_numeric(df[col], errors= 'coerce')
+    known_string_cols = ['firstname', 'lastname', 'nation', 'pos', 'squad']
+
+    for col in df.columns:
+        if col not in known_string_cols:
+            if df[col].dtype == 'object':
+                df[col] = pd.to_numeric(df[col], errors= 'coerce')
+
+
+    # for col in df.select_dtypes(include=['object']).columns:
+    #     df[col] = pd.to_numeric(df[col], errors= 'coerce')
 
     df.reset_index(drop=True, inplace=True)
 
     return df
 
+
+def clean_team_dataframe(table: pd.DataFrame) -> pd.DataFrame:
+
+    if not isinstance(table, pd.DataFrame) or table.empty:
+        print(f"Empty or invalid Dataframe provided for team cleaning'.")
+        return pd.DataFrame()
+    
+    df = table.copy()
+
+    #merge multi-index header
+    df.columns = [
+        f'{col[0].lower()}_{col[1].lower()}' if 'Unnamed:' not in col[0] else col[1].lower() for col in table.columns
+        ]
+    
+    df.columns = [
+        col.replace(' ','_').replace('+','plus').replace('-','_').replace('.','') 
+        for col in df.columns
+        ]
+
+    df.rename(columns= TEAM_STAT_MAPPING, inplace=True)
+
+    final_db_columns = list(TEAM_STAT_MAPPING.values())
+    cols_to_keep = [col for col in df.columns if col in final_db_columns]
+    df = df[cols_to_keep]
+
+    for col in df.columns:
+        if col != 'club_name':
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+
+    df.fillna(0, inplace=True)
+
+    for col in df.select_dtypes(include=['float']).columns:
+        if (df[col]==df[col].astype(int)).all():
+            df[col] = df[col].astype(int)
+
+    return df
 

@@ -1,4 +1,4 @@
-from data_collection.data_preprocessing import parse_table_from_html, clean_player_table
+from data_collection.data_preprocessing import parse_table_from_html, clean_player_dataframe, clean_team_dataframe
 from data_collection.data_collection import stat_tables
 import os 
 import pandas as pd
@@ -34,7 +34,7 @@ for html_page in html_pages_filename_list:
 
 
     print(f"-> Processing File: {html_page} | Stat Type: {stat_type_tag} ..")
-    print(f'{html_filepath}')
+    #print(f'{html_filepath}')
 
     if stat_type_tag == 'stats':
 
@@ -48,32 +48,26 @@ for html_page in html_pages_filename_list:
         if data_table_team:
             print("Squad data successfully retrieved")
         
-        print(f"--- Columns for {stat_type_tag} ---")
-        df = pd.read_html(data_table_team, header=[0, 1])[0] 
-        print(df.columns)
-        print("\n")
+        print(f"--- Cleaning Columns for {stat_type_tag} ---")
+        team_table = pd.read_html(data_table_team, header=[0, 1])[0]
+        team_df = clean_team_dataframe(table=team_table)
+        print(f"Check cleaning: {team_df.info()}")
+        # print(f'Preview dataframe: {print(team_df.head(2))}')
 
         div_id_players = f'all_stats_{stat_type_tag}'
-        print(f"Attempting to parse player data from div_id= '{div_id_players}' ..")
+        print(f"\nAttempting to parse player data from div_id= '{div_id_players}' ..")
         data_table_players = parse_table_from_html(html_content=html_content,
                                                     div_id= div_id_players
                                                     )
-        print(f"--- Columns for {stat_type_tag} ---")
-        df = pd.read_html(data_table_players, header=[0, 1])[0]
-        print(df.columns)
-        print("\n") 
-        # df_clean =clean_player_table(df)
-        # df_clean.head(2)
 
         if data_table_players:
             print("Player data successfully retrieved.")
-    
-        #create dataframe for cleaning
-        print(f"--- Columns for {stat_type_tag} ---")
-        df = pd.read_html(data_table_players, header=[0, 1])[0]
-        print(df.columns)
-        print("\n") 
-
+        print(f"--- Cleaning Columns for {stat_type_tag} ---")
+        players_table = pd.read_html(data_table_players, header=[0, 1])[0]
+        players_df = clean_player_dataframe(table=players_table, stat_type=stat_type_tag)
+        print(f"Check cleaning: {players_df.info()}")
+        # print(f'Preview dataframe: {print(players_df.head(2))}')
+        
     else:
         if stat_type_tag =="keepersadv":
             stat_type_tag="keeper_adv"
@@ -91,9 +85,12 @@ for html_page in html_pages_filename_list:
         if data_table_players:
             print("Player data successfully retrieved")
         
-        print(f"--- Columns for {stat_type_tag} ---")
-        df = pd.read_html(data_table_players, header=[0, 1])[0]
-        print(df.columns)
-        print("\n") 
+        print(f"--- Cleaning Columns for {stat_type_tag} ---")
+        players_table = pd.read_html(data_table_players, header=[0, 1])[0]
+        players_df = clean_player_dataframe(table=players_table, stat_type=stat_type_tag)
+        print(f"Check cleaning: {players_df.info()}")
+        # print(f'Preview dataframe: {players_df.head(2)}')
+        
+        
 
     print(f"-> Finished processing {html_page}\n")
