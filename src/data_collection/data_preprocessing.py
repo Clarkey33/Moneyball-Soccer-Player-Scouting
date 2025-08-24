@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup, Comment
 import requests
 import re
 import pandas as pd
+from functools import reduce
 import numpy as np
 from io import StringIO
 import os
@@ -206,10 +207,6 @@ TEAM_STAT_MAPPING = {
     'expected_npxg': 'npxg'
 }
 
-
-
-
-
 def parse_table_from_html(
         html_content:str, 
         div_id:str)-> str:
@@ -226,6 +223,7 @@ def parse_table_from_html(
         return None
         
     table = div_data.find('table')
+
     if table:
         print(f"Table found directly in div ='{div_id}'")
         return StringIO(str(table))  
@@ -242,7 +240,6 @@ def parse_table_from_html(
             else:
                 print(f"No table could be found in div='{div_id}', either directly or in comments")
                 return None 
-
 
 def clean_player_dataframe(table:pd.DataFrame,
                        stat_type:str) -> pd.DataFrame:
@@ -263,7 +260,6 @@ def clean_player_dataframe(table:pd.DataFrame,
         for col in df.columns
         ]
     
-    
     if stat_type not in PLAYER_STAT_MAPPINGS:
         raise ValueError(f"Unknown stat_type: '{stat_type}'. No mapping found.")
     
@@ -282,7 +278,6 @@ def clean_player_dataframe(table:pd.DataFrame,
     i = df[df['player'] == 'Player'].index
     df.drop(i, inplace=True)
 
-
     if 'player' in df.columns:
         #df = df[df['player'] != 'Player'].copy()
         name_split = df['player'].str.split(' ', n=1, expand=True)
@@ -293,39 +288,45 @@ def clean_player_dataframe(table:pd.DataFrame,
 
     if 'nation' in df.columns:
         df['nation'] = df['nation'].str.split().str[-1]
+        df['nation'] = df['nation'].fillna('UNK')
 
     if 'pos' in df.columns:
         df['pos'] = df['pos'].str.split(',').str[0]
 
     if 'born' in df.columns:
-        df['born'] = pd.to_datetime(df['born'],format='%Y', errors='coerce')
-    
-    df.drop(columns=['rk','matches'], inplace=True,errors='ignore')
+        #df['born'] = pd.to_datetime(df['born'],format='%Y', errors='coerce')
+        born_series = pd.to_numeric(df['born'], errors='coerce')
+        df['born'] = born_series.astype('Int64')
 
     known_string_cols = ['firstname', 'lastname', 'nation', 'pos', 'squad']
 
     for col in df.columns:
         if col not in known_string_cols:
             if df[col].dtype == 'object':
-                df[col] = pd.to_numeric(df[col], errors= 'coerce')
+                df[col] = df[col].str.replace(',', '', regex=False)
 
+            df[col] = pd.to_numeric(df[col], errors= 'coerce')
+    
+    numeric_cols = df.select_dtypes(include=np.number).columns
+    df[numeric_cols] = df[numeric_cols].fillna(0)
 
-    # for col in df.select_dtypes(include=['object']).columns:
-    #     df[col] = pd.to_numeric(df[col], errors= 'coerce')
+    for col in df.select_dtypes(include=['float']).columns:
+        if np.array_equal(df[col], df[col].astype(int)):
+             df[col] = df[col].astype(int)
 
+    df.drop(columns=['rk','matches'], inplace=True,errors='ignore')
     df.reset_index(drop=True, inplace=True)
-
     return df
 
-
-def clean_team_dataframe(table: pd.DataFrame) -> pd.DataFrame:
+def clean_team_dataframe(
+        table: pd.DataFrame
+        ) -> pd.DataFrame:
 
     if not isinstance(table, pd.DataFrame) or table.empty:
         print(f"Empty or invalid Dataframe provided for team cleaning'.")
         return pd.DataFrame()
     
     df = table.copy()
-
     #merge multi-index header
     df.columns = [
         f'{col[0].lower()}_{col[1].lower()}' if 'Unnamed:' not in col[0] else col[1].lower() for col in table.columns
@@ -351,6 +352,34 @@ def clean_team_dataframe(table: pd.DataFrame) -> pd.DataFrame:
     for col in df.select_dtypes(include=['float']).columns:
         if (df[col]==df[col].astype(int)).all():
             df[col] = df[col].astype(int)
-
     return df
+
+# Need to refactor to address 
+# -> MergeError: Passing 'suffixes' which cause duplicate columns {'90s_x', 'age_x', 'pos_x'} is not allowed.
+def merge_player_dataframes(
+        list_of_dfs:list[pd.DataFrame])->pd.DataFrame:
+    
+    if not list_of_dfs:
+        print(f"Warning: The list of Dataframes to merge is empty.")
+        return pd.DataFrame
+    
+    merge_keys = ['firstname', 'lastname', 'squad','born','nation']
+
+    try:
+        merged_df = reduce(
+            lambda left, right: pd.merge(left,right, on=merge_keys, how ='outer'),
+            list_of_dfs
+            )
+        
+    except KeyError as e:
+        print(f"Warning: Merge failed. A key column is missing from one of the Dataframes: {e}")
+        print(("Ensure all Dataframes have the columns: ", merge_keys))
+        return pd.Dataframe()
+    
+    numeric_cols = merged_df.select_dtypes(include=np.number).columns
+    merged_df[numeric_cols] = merged_df[numeric_cols].fillna(0)
+
+    return merged_df
+                  
+    
 
