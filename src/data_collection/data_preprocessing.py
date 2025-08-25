@@ -363,21 +363,42 @@ def merge_player_dataframes(
         print(f"Warning: The list of Dataframes to merge is empty.")
         return pd.DataFrame
     
-    merge_keys = ['firstname', 'lastname', 'squad','born','nation']
+    primary_keys = ['firstname', 'lastname', 'squad','born']
+    base_info_cols = primary_keys + ['nation', 'pos','age','90s']
+
+    base_df = list_of_dfs[0].copy()
+
+    existing_base_cols = [col for col in base_info_cols if col in base_df.columns]
+    base_df = base_df[existing_base_cols]
+
+    processed_dfs =[base_df]
+
+    for i, df in enumerate(list_of_dfs):
+        stat_cols = [col for col in df.columns if col not in base_info_cols]
+        keys_in_df = [key for key in primary_keys if key in df.columns]
+        temp_df = df[keys_in_df + stat_cols]
+
+        if i>0:
+            processed_dfs.append(temp_df)
+        else:
+            processed_dfs[0] = temp_df
 
     try:
         merged_df = reduce(
-            lambda left, right: pd.merge(left,right, on=merge_keys, how ='outer'),
-            list_of_dfs
+            lambda left, right: pd.merge(left,right, on=primary_keys, how ='outer'),
+            processed_dfs
             )
-        
     except KeyError as e:
         print(f"Warning: Merge failed. A key column is missing from one of the Dataframes: {e}")
-        print(("Ensure all Dataframes have the columns: ", merge_keys))
+        print(("Ensure all Dataframes have the columns: ", primary_keys))
         return pd.Dataframe()
     
     numeric_cols = merged_df.select_dtypes(include=np.number).columns
     merged_df[numeric_cols] = merged_df[numeric_cols].fillna(0)
+
+    for col in merged_df.select_dtypes(include=['float']).columns:
+        if np.array_equal(merged_df[col],merged_df[col].astype(int)):
+            merged_df[col] = merged_df[col].astype(int)
 
     return merged_df
                   

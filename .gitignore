@@ -7,4 +7,5 @@ __pycache__/
 *.sav
 *.joblib
 *.html
+*.parquet
 .DS_Store

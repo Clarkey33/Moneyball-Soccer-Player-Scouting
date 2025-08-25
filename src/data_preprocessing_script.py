@@ -128,6 +128,8 @@ for group_key, list_of_dfs in player_data_groups.items():
     print(f"\nMerging {len(list_of_dfs)} tables for group: {group_key}")
     master_df = merge_player_dataframes(list_of_dfs=list_of_dfs)
 
+    master_df = master_df.copy()
+
     league_name, season_id = group_key.rsplit('_',1)
     master_df['season_id'] = season_id
     master_df['competition_name'] = league_name.replace('_',' ')
@@ -135,15 +137,18 @@ for group_key, list_of_dfs in player_data_groups.items():
 
     print(f"Finished merging for {group_key}. Final shape: {master_df.shape}")
     print("Preview of merged data:")
-    print(master_df.head(2))
+    print(master_df.head(3))
+    print(master_df.info())
 
 print("\n-> Phase 2 Complete. ETL process finished.")
+
 print("->Commencing Phase 3: Staging Files to Processed Directory")
+
 print(f"\nOutput directory set to: {processed_data_dir}")
 print(f"\nSaving {len(final_player_dfs)} merged player dataframes..")
 
 for player_master_df in final_player_dfs:
-    if not player_master_df or player_master_df.empty():
+    if player_master_df.empty:
         print("Skipping none or empty player Dataframe")
         continue
     try:
