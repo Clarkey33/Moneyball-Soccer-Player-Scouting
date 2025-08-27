@@ -1,5 +1,5 @@
 from data_collection.data_preprocessing import parse_table_from_html, clean_player_dataframe, clean_team_dataframe, merge_player_dataframes
-from data_collection.data_collection import stat_tables
+from etl_fbref import stat_tables
 import os 
 import pandas as pd 
 from pathlib import Path
