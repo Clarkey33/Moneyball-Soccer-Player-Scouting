@@ -94,3 +94,38 @@ def save_html(content, filepath):
         html_file.write(content)
 
 
+
+#--------------- Transfer market----------------
+
+f"{https://www.transfermarkt.com}/{campeonato-brasileiro-serie-a}/startseite/wettbewerb/{BRA1}"
+#BASE_URL/LEAGUE_NAME/startseite/wettbewerb/LEGAUE_ID
+
+BASE_URL = "https://www.transfermarkt.com/"
+league_config_marktvalue ={
+    "Italian Serie A":{"id":"11", "name":"", },
+    "English Premier league":{"id":"9", "name":"premier-league"},
+    "Spanish La liga":{"id":"12", "name":""},
+    "France Ligue 1":{"id":"13", "name":"Ligue-1"},
+    "German Bundesliga":{"id":"20", "name":"bundesliga"},
+    "Argentina Liga Profesional":{"id":"21", "name":"Liga-Profesional-Argentina"},
+    "Austrian Bundesliga":{"id":"56", "name":"Austrian-Bundesliga"},
+    "Belgian Pro League":{"id":"37", "name":"Belgian-Pro-League"},
+    "Brazil Serie A":{"id":"24", "name":"Serie-A"},
+    "Bulgarian First League":{"id":"67", "name":"Bulgarian-First-League", "season":"cross_year"},
+    "Croatia Hrvatska NL":{"id":"63", "name":"Hrvatska-NL", "season":"cross_year"},
+    "Czech First League":{"id":"66", "name":"Czech-First-League", "season":"cross_year"},
+    "Danish Superliga":{"id":"50", "name":"Danish-Superliga", "season":"cross_year"},
+    "Super League Greece":{"id":"27", "name":"Super-League-Greece", "season":"cross_year"},
+    "Mexico Liga MX":{"id":"31", "name":"Liga-MX", "season":"cross_year"},
+    "Netherlands Eredivisie":{"id":"23", "name":"Eredivisie", "season":"cross_year"},
+    "Norway Eliteserien":{"id":"28", "name":"Eliteserien", "season":"cross_year"},
+    "Poland Ekstraklasa":{"id":"36", "name":"Ekstraklasa", "season":"cross_year"},
+    "Portugal Primeira Liga":{"id":"32", "name":"Primeira-Liga", "season":"cross_year"},
+    "Russian Premier League":{"id":"30", "name":"Russian-Premier-League", "season":"cross_year"},
+    "Scottish Premiership":{"id":"40", "name":"Scottish-Premiership", "season":"cross_year"},
+    "Serbian SuperLiga":{"id":"54", "name":"Serbian-SuperLiga", "season":"cross_year"},
+    "Swiss Super League":{"id":"57", "name":"Swiss-Super-League", "season":"cross_year"},
+    "Allsvenskan":{"id":"29", "name":"Allsvenskan", "season":"cross_year"},
+    "Super Lig":{"id":"26", "name":"Super-Lig", "season":"cross_year"},
+    "USA Major League Soccer":{"id":"22", "name":"Major-League-Soccer", "season":"single_year"},
+}
