@@ -1,0 +1,178 @@
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/2
+Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/3
+Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/2
+Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/3
+Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/2
+Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/3
+Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/2
+Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/3
+Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/2
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/3
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/2
+Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/3
+Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/2
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/3
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/2
+Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/3
+Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/2
+Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/3
+Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/2
+Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/3
+Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/2
+Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/3
+Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/2
+Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/3
+Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/3
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/2
+Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/2
+
+response:200, OK
+Conent successfully retrieved
+html content retrieved
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/3
+Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/3

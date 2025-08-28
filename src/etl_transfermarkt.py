@@ -1,4 +1,4 @@
-from src.data_collection.scraping_utils import fetch_page,save_html
+from data_collection.scraping_utils import fetch_page,save_html
 import requests
 from bs4 import BeautifulSoup as bs
 from pathlib import Path
@@ -7,6 +7,8 @@ import os
 import random
 
 
+project_root = Path(__file__).resolve().parent.parent
+output_dir = project_root/"data"/"raw"/"transfermarkt" #remember to include script to create folder
 
 BASE_URL = "https://www.transfermarkt.com/"
 
@@ -46,3 +48,28 @@ def construct_transfermarkt_url(league_name: str,
                                 page: int) -> str:
     print("Constructing url for scraping..")
     return f"{BASE_URL}{league_name}/marktwertaenderungen/wettbewerb/{league_id}/page/{page}"
+
+
+def scrape_all_data():
+    html_pages=[] #just for testing
+    for league, config in league_config_marktvalue.items():
+        for page_num in range(2,4):
+            url= construct_transfermarkt_url(league_name=config.get('name'),
+                                             league_id=config.get("id"),
+                                             page=page_num
+                                             )
+            
+            print(f"Attempting to fetch html at :{url}")
+            html_content = fetch_page(url=url)
+            
+            if html_content:
+                print("html content retrieved")
+                html_pages.append(html_content)
+
+    for page in html_pages:
+        print(page)
+
+            
+
+if __name__ == "__main__":
+    scrape_all_data()
