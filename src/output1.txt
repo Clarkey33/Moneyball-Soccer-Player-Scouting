@@ -1,178 +1,1062 @@
+
+->Processing Legaue: Italian Serie A..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/2
-Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/1
+Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Italian_Serie_A_page_1.html
+Found 23 total pages for Italian Serie A.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/3
-Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/3
+Retrieving content from; https://www.transfermarkt.com/serie-a/marktwertaenderungen/wettbewerb/IT1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Italian_Serie_A_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Italian Serie A
+
+->Processing Legaue: English Premier league..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/2
-Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/1
+Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/English_Premier_league_page_1.html
+Found 23 total pages for English Premier league.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/3
-Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/3
+Retrieving content from; https://www.transfermarkt.com/premier-league/marktwertaenderungen/wettbewerb/GB1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/English_Premier_league_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: English Premier league
+
+->Processing Legaue: Spanish La liga..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/2
-Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/1
+Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Spanish_La_liga_page_1.html
+Found 20 total pages for Spanish La liga.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/3
-Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/3
+Retrieving content from; https://www.transfermarkt.com/laliga/marktwertaenderungen/wettbewerb/ES1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Spanish_La_liga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Spanish La liga
+
+->Processing Legaue: France Ligue 1..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/2
-Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/1
+Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/France_Ligue_1_page_1.html
+Found 19 total pages for France Ligue 1.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/3
-Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/3
+Retrieving content from; https://www.transfermarkt.com/ligue-1/marktwertaenderungen/wettbewerb/FR1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/France_Ligue_1_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: France Ligue 1
+
+->Processing Legaue: German Bundesliga..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/2
-Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/1
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/German_Bundesliga_page_1.html
+Found 21 total pages for German Bundesliga.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/3
-Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/3
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/L1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/German_Bundesliga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: German Bundesliga
+
+->Processing Legaue: Argentina Liga Profesional..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/2
-Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/1
+Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Argentina_Liga_Profesional_page_1.html
+Found 34 total pages for Argentina Liga Profesional.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/3
-Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/3
+Retrieving content from; https://www.transfermarkt.com/torneo-final/marktwertaenderungen/wettbewerb/ARGC/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Argentina_Liga_Profesional_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Argentina Liga Profesional
+
+->Processing Legaue: Austrian Bundesliga..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/2
-Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/1
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Austrian_Bundesliga_page_1.html
+Found 13 total pages for Austrian Bundesliga.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/3
-Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/3
+Retrieving content from; https://www.transfermarkt.com/bundesliga/marktwertaenderungen/wettbewerb/A1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Austrian_Bundesliga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Austrian Bundesliga
+
+->Processing Legaue: Belgian Pro League..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/2
-Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/1
+Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Belgian_Pro_League_page_1.html
+Found 18 total pages for Belgian Pro League.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/3
-Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/3
+Retrieving content from; https://www.transfermarkt.com/jupiler-pro-league/marktwertaenderungen/wettbewerb/BE1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Belgian_Pro_League_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Belgian Pro League
+
+->Processing Legaue: Brazil Serie A..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/2
-Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/1
+Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Brazil_Serie_A_page_1.html
+Found 25 total pages for Brazil Serie A.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/3
-Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/3
+Retrieving content from; https://www.transfermarkt.com/campeonato-brasileiro-serie-a/marktwertaenderungen/wettbewerb/BRA1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Brazil_Serie_A_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Brazil Serie A
+
+->Processing Legaue: Bulgarian First League..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/2
-Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/1
+Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Bulgarian_First_League_page_1.html
+Found 15 total pages for Bulgarian First League.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/3
-Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/3
+Retrieving content from; https://www.transfermarkt.com/efbet-liga/marktwertaenderungen/wettbewerb/BU1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Bulgarian_First_League_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Bulgarian First League
+
+->Processing Legaue: Croatia Hrvatska NL..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/2
-Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/1
+Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Croatia_Hrvatska_NL_page_1.html
+Found 12 total pages for Croatia Hrvatska NL.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/3
-Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/3
+Retrieving content from; https://www.transfermarkt.com/1-hnl/marktwertaenderungen/wettbewerb/KR1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Croatia_Hrvatska_NL_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Croatia Hrvatska NL
+
+->Processing Legaue: Czech First League..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/2
-Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/1
+Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Czech_First_League_page_1.html
+Found 18 total pages for Czech First League.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/3
-Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/3
+Retrieving content from; https://www.transfermarkt.com/fortuna-liga/marktwertaenderungen/wettbewerb/TS1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Czech_First_League_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Czech First League
+
+->Processing Legaue: Danish Superliga..
+Constructing filepath..
+Page 1 not found. fetching from web..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/2
-Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/2
+Attempting to fetch html at :https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/1
+Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/1
 
 response:200, OK
 Conent successfully retrieved
-html content retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Danish_Superliga_page_1.html
+Found 12 total pages for Danish Superliga.
+Constructing filepath..
+Fetching page 1..
 Constructing url for scraping..
-Attempting to fetch html at :https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/3
-Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/3
+Retrieving content from; https://www.transfermarkt.com/superligaen/marktwertaenderungen/wettbewerb/DK1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Danish_Superliga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Danish Superliga
+
+->Processing Legaue: Super League Greece..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/Super-League-Greece/marktwertaenderungen/wettbewerb/GR1/page/1
+Retrieving content from; https://www.transfermarkt.com/Super-League-Greece/marktwertaenderungen/wettbewerb/GR1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Super_League_Greece_page_1.html
+Found 16 total pages for Super League Greece.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/Super-League-Greece/marktwertaenderungen/wettbewerb/GR1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Super_League_Greece_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Super League Greece
+
+->Processing Legaue: Mexico Liga MX..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/liga-mx-apertura/marktwertaenderungen/wettbewerb/MEXA/page/1
+Retrieving content from; https://www.transfermarkt.com/liga-mx-apertura/marktwertaenderungen/wettbewerb/MEXA/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Mexico_Liga_MX_page_1.html
+Found 19 total pages for Mexico Liga MX.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/liga-mx-apertura/marktwertaenderungen/wettbewerb/MEXA/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Mexico_Liga_MX_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Mexico Liga MX
+
+->Processing Legaue: Netherlands Eredivisie..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/eredivisie/marktwertaenderungen/wettbewerb/NL1/page/1
+Retrieving content from; https://www.transfermarkt.com/eredivisie/marktwertaenderungen/wettbewerb/NL1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Netherlands_Eredivisie_page_1.html
+Found 19 total pages for Netherlands Eredivisie.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/eredivisie/marktwertaenderungen/wettbewerb/NL1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Netherlands_Eredivisie_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Netherlands Eredivisie
+
+->Processing Legaue: Norway Eliteserien..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/eliteserien/marktwertaenderungen/wettbewerb/NO1/page/1
+Retrieving content from; https://www.transfermarkt.com/eliteserien/marktwertaenderungen/wettbewerb/NO1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Norway_Eliteserien_page_1.html
+Found 16 total pages for Norway Eliteserien.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/eliteserien/marktwertaenderungen/wettbewerb/NO1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Norway_Eliteserien_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Norway Eliteserien
+
+->Processing Legaue: Poland Ekstraklasa..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/pko-ekstraklasa/marktwertaenderungen/wettbewerb/PL1/page/1
+Retrieving content from; https://www.transfermarkt.com/pko-ekstraklasa/marktwertaenderungen/wettbewerb/PL1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Poland_Ekstraklasa_page_1.html
+Found 19 total pages for Poland Ekstraklasa.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/pko-ekstraklasa/marktwertaenderungen/wettbewerb/PL1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Poland_Ekstraklasa_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Poland Ekstraklasa
+
+->Processing Legaue: Portugal Primeira Liga..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/liga-nos/marktwertaenderungen/wettbewerb/PO1/page/1
+Retrieving content from; https://www.transfermarkt.com/liga-nos/marktwertaenderungen/wettbewerb/PO1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Portugal_Primeira_Liga_page_1.html
+Found 20 total pages for Portugal Primeira Liga.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/liga-nos/marktwertaenderungen/wettbewerb/PO1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Portugal_Primeira_Liga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Portugal Primeira Liga
+
+->Processing Legaue: Russian Premier League..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/premier-liga/marktwertaenderungen/wettbewerb/RU1/page/1
+Retrieving content from; https://www.transfermarkt.com/premier-liga/marktwertaenderungen/wettbewerb/RU1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Russian_Premier_League_page_1.html
+Found 18 total pages for Russian Premier League.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/premier-liga/marktwertaenderungen/wettbewerb/RU1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Russian_Premier_League_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Russian Premier League
+
+->Processing Legaue: Scottish Premiership..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/scottish-premiership/marktwertaenderungen/wettbewerb/SC1/page/1
+Retrieving content from; https://www.transfermarkt.com/scottish-premiership/marktwertaenderungen/wettbewerb/SC1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Scottish_Premiership_page_1.html
+Found 13 total pages for Scottish Premiership.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/scottish-premiership/marktwertaenderungen/wettbewerb/SC1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Scottish_Premiership_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Scottish Premiership
+
+->Processing Legaue: Serbian SuperLiga..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/super-liga-srbije/marktwertaenderungen/wettbewerb/SER1/page/1
+Retrieving content from; https://www.transfermarkt.com/super-liga-srbije/marktwertaenderungen/wettbewerb/SER1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Serbian_SuperLiga_page_1.html
+Found 16 total pages for Serbian SuperLiga.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/super-liga-srbije/marktwertaenderungen/wettbewerb/SER1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Serbian_SuperLiga_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Serbian SuperLiga
+
+->Processing Legaue: Swiss Super League..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/super-league/marktwertaenderungen/wettbewerb/C1/page/1
+Retrieving content from; https://www.transfermarkt.com/super-league/marktwertaenderungen/wettbewerb/C1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Swiss_Super_League_page_1.html
+Found 13 total pages for Swiss Super League.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/super-league/marktwertaenderungen/wettbewerb/C1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Swiss_Super_League_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Swiss Super League
+
+->Processing Legaue: Allsvenskan..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/allsvenskan/marktwertaenderungen/wettbewerb/SE1/page/1
+Retrieving content from; https://www.transfermarkt.com/allsvenskan/marktwertaenderungen/wettbewerb/SE1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Allsvenskan_page_1.html
+Found 16 total pages for Allsvenskan.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/allsvenskan/marktwertaenderungen/wettbewerb/SE1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Allsvenskan_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Allsvenskan
+
+->Processing Legaue: Super Lig..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/super-lig/marktwertaenderungen/wettbewerb/TR1/page/1
+Retrieving content from; https://www.transfermarkt.com/super-lig/marktwertaenderungen/wettbewerb/TR1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Super_Lig_page_1.html
+Found 20 total pages for Super Lig.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/super-lig/marktwertaenderungen/wettbewerb/TR1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/Super_Lig_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: Super Lig
+
+->Processing Legaue: USA Major League Soccer..
+Constructing filepath..
+Page 1 not found. fetching from web..
+Constructing url for scraping..
+Attempting to fetch html at :https://www.transfermarkt.com/major-league-soccer/marktwertaenderungen/wettbewerb/MLS1/page/1
+Retrieving content from; https://www.transfermarkt.com/major-league-soccer/marktwertaenderungen/wettbewerb/MLS1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/USA_Major_League_Soccer_page_1.html
+Found 32 total pages for USA Major League Soccer.
+Constructing filepath..
+Fetching page 1..
+Constructing url for scraping..
+Retrieving content from; https://www.transfermarkt.com/major-league-soccer/marktwertaenderungen/wettbewerb/MLS1/page/1
+
+response:200, OK
+Conent successfully retrieved
+Filepath successfully constructed.
+saving html content at: /home/on3b3ar/projects/moneyball-wolves-cunha-replacement/data/raw/transfermarkt/USA_Major_League_Soccer_page_1.html
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Constructing filepath..
+Scrape complete for: USA Major League Soccer
